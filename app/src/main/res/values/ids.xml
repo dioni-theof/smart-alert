@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn_signup" type="id" />
+    <item name="email" type="id" />
+    <item name="btn_reset_password" type="id" />
+</resources>

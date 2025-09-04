@@ -1,0 +1,17 @@
+<resources>
+<string name="app_name">SmartAlert</string>
+<string name="action_sign_in_short">text1</string>
+<string name="btn_forgot_password">text2</string>
+<string name="btn_link_to_login">button1</string>
+<string name="minimum_password" />
+<string name="auth_failed" />
+<string name="Welcome">Καλώς Ήρθες!</string>
+<string name="SingOut">Αποσύνδεση</string>
+<string name="fire">Φωτιά</string>
+    <string name="Emergency_Numbers">Αριθμοί έκτακτης ανάγκης </string>
+    <string name="Save">Αποθήκευση</string>
+    <string name="Abort">Ακύρωση</string>
+    <string name="Select_image">Επιλογή Εικόνας</string>
+    <string name="Upload">Καταχώριση</string>
+    <string name="Back">Επιστροφή</string>
+</resources>

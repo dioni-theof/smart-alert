@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SmartAlert</string>
+    <string name="action_sign_in_short">text1</string>
+    <string name="btn_forgot_password">text2</string>
+    <string name="btn_link_to_login">button1</string>
+    <string name="minimum_password" />
+    <string name="auth_failed" />
+    <string name="Welcome">Benvenida</string>
+    <string name="SingOut">Gritar</string>
+    <string name="fire">Fuego</string>
+    <string name="Emergency_Numbers">Numeros de emergencia</string>
+    <string name="Save">Salvar</string>
+    <string name="Abort">Abortar</string>
+    <string name="Select_image">Seleccionar imagen</string>
+    <string name="Upload">Subir</string>
+    <string name="Back">Espalda</string>
+</resources>
