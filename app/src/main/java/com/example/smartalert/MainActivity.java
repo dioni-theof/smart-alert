@@ -1,15 +1,5 @@
 package com.example.smartalert;
 
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
@@ -19,7 +9,6 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.util.DisplayMetrics;
@@ -30,8 +19,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -40,8 +34,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-
-import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -302,29 +294,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Language already selected!", Toast.LENGTH_SHORT).show();
         }
     }
-    public void getLocation(){
-        try {
-            if (ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
-                ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 101);
-            }
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-
-        gpsTracker = new GpsTracker(MainActivity.this);
-
-        if(gpsTracker.canGetLocation()){
-            latitude = gpsTracker.getLatitude();
-            longitude = gpsTracker.getLongitude();
-            // tvLatitude.setText(String.valueOf(latitude));
-            // tvLongitude.setText(String.valueOf(longitude));
-            Log.d("GPS Enabled", "GPS Enabled");
-
-        }else{
-            gpsTracker.showSettingsAlert();
-            return;
-        }
-    }
 
     public void sendFireAlert(View view) {
         try {
@@ -351,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
             myRef.child(key).child("longtitude").setValue(longitude);
             myRef.child(key).child("latitude").setValue(latitude);
         }
-        getLocation();
+//        getLocation();
        String message = "Βρίσκομαι στην τοποθεσία με γεωγραφικό μήκος : "+String.valueOf(latitude) +" και γεωγραφικό πλάτος :"+String.valueOf(longitude) +" και παρατηρώ μια πυρκαγιά";
 
         sendSMS(message);
