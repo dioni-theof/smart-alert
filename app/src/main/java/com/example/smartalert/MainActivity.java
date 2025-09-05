@@ -305,12 +305,10 @@ public class MainActivity extends AppCompatActivity {
             myRef.child(key).child("longtitude").setValue(longitude);
             myRef.child(key).child("latitude").setValue(latitude);
         }
-//        getLocation();
+
        String message = "Βρίσκομαι στην τοποθεσία με γεωγραφικό μήκος : "+String.valueOf(latitude) +" και γεωγραφικό πλάτος :"+String.valueOf(longitude) +" και παρατηρώ μια πυρκαγιά";
 
         sendSMS(message);
-
-
     }
 
     public void sendSMS(String message){
