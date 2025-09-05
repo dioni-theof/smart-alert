@@ -206,11 +206,7 @@ public class MainActivity extends AppCompatActivity {
                 Color.parseColor("#0F9D58"));
         actionBar.setBackgroundDrawable(colorDrawable);
 
-
-
         accelerometer = new Accelerometer(this);
-
-
         accelerometer.setListener(new Accelerometer.Listener() {
             @Override
             public void onTranslation(double tx, double ty, double tz) {
@@ -218,10 +214,6 @@ public class MainActivity extends AppCompatActivity {
                 double loAccelerationReader = Math.sqrt(Math.pow(tx, 2)
                         + Math.pow(ty, 2)
                         + Math.pow(tz, 2));
-
-//                DecimalFormat precision = new DecimalFormat("0.00");
-//                double ldAccRound = Double.parseDouble(precision.format(loAccelerationReader));
-
 
                 if(loAccelerationReader > 0.3d && loAccelerationReader < 0.5d) {
 
@@ -255,12 +247,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
-
     }
 
 
@@ -276,7 +262,6 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
 
         accelerometer.unregister();
-
     }
 
     public void setLocale(String localeName) {
@@ -405,13 +390,6 @@ public class MainActivity extends AppCompatActivity {
         finish();
         System.exit(0);
     }
-
-
-
-
-
-
-
 }
 
 
