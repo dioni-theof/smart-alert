@@ -46,7 +46,7 @@ It notifies both the user and selected contacts about possible dangers, providin
 
 | Multilingual | Event History |
 |--------------|---------------|
-| ![Language Selection](docs/images/lang.png) | ![Data Screen](docs/images/data.png) |
+| ![Language Selection](docs/images/lang.png) |
 
 *(Replace the `docs/images/...` files with your actual screenshots.)*
 
