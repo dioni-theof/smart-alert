@@ -44,11 +44,10 @@ It notifies both the user and selected contacts about possible dangers, providin
 |-----------|------------|----------------|
 | ![Main Menu](docs/images/menu.png) | ![Fire Alert](docs/images/fire.png) | ![Fall Detection](docs/images/fall.png) |
 
-| Multilingual | Event History |
-|--------------|---------------|
+| Multilingual | 
+|--------------|
 | ![Language Selection](docs/images/lang.png) |
 
-*(Replace the `docs/images/...` files with your actual screenshots.)*
 
 ---
 
